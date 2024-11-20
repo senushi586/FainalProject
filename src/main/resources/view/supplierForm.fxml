@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="740.0" prefWidth="1214.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.SupplierFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="740.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="220.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5dde3" height="638.0" layoutX="221.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="993.0" />
+      <ImageView fitHeight="67.0" fitWidth="66.0" layoutX="16.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icon/dash icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="82.0" fitWidth="117.0" layoutX="92.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icon/juice bar icon.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="366.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Welcome back" wrappingWidth="126.99999999999994">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="374.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" />
+      <Line endX="-79.0" endY="11.0" layoutX="444.0" layoutY="74.0" startX="-79.0" startY="-44.0" stroke="#de7b93" strokeWidth="2.0" />
+      <TableView fx:id="tblSupplier" layoutX="237.0" layoutY="515.0" onKeyTyped="#txtSearch" onMouseClicked="#onclick" prefHeight="203.0" prefWidth="943.0" style="-fx-background-radius: 20;">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="133.63272094726562" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="159.3232421875" text="Company Name" />
+            <TableColumn fx:id="colLocation" prefWidth="205.16351318359375" text="Location" />
+            <TableColumn fx:id="colMobile" prefWidth="228.4935302734375" text="Mobile" />
+            <TableColumn fx:id="colEmail" prefWidth="209.75567626953125" text="Email" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtId" layoutX="263.0" layoutY="267.0" prefHeight="29.0" prefWidth="276.0" style="-fx-background-radius: 20;" />
+      <TextField fx:id="txtName" layoutX="262.0" layoutY="355.0" prefHeight="29.0" prefWidth="276.0" style="-fx-background-radius: 20;" />
+      <TextField fx:id="txtLocation" layoutX="261.0" layoutY="443.0" prefHeight="29.0" prefWidth="276.0" style="-fx-background-radius: 20;" />
+      <Label layoutX="304.0" layoutY="325.0" text="Supplier Company Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="356.0" layoutY="229.0" text="SupplierID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="324.0" layoutY="413.0" text="Supplier Location">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMobile" layoutX="710.0" layoutY="267.0" prefHeight="29.0" prefWidth="276.0" style="-fx-background-radius: 20;" />
+      <TextField fx:id="txtEmail" layoutX="711.0" layoutY="355.0" prefHeight="29.0" prefWidth="276.0" style="-fx-background-radius: 20;" />
+      <Label layoutX="766.0" layoutY="232.0" text="Supplier Mobile">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="765.0" layoutY="321.0" text="Supplier Email">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearchID" alignment="CENTER" layoutX="759.0" layoutY="157.0" prefHeight="46.0" prefWidth="300.0" promptText="Search by ID or name" style="-fx-background-radius: 20; -fx-background-color: #FFFFFF;" />
+      <Pane layoutX="36.0" layoutY="147.0" prefHeight="64.0" prefWidth="222.0" style="-fx-background-radius: 20;">
+         <children>
+            <JFXButton fx:id="btnDashboard" layoutX="-5.0" layoutY="-21.0" onAction="#btnDashboardOnAction" prefHeight="64.0" prefWidth="222.0" style="-fx-background-radius: 20;" text="Dashboard" textFill="#940229">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="-5.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/icon/dashboard icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="17.0" layoutY="219.0" prefHeight="64.0" prefWidth="234.0" style="-fx-background-radius: 20;">
+         <children>
+            <JFXButton fx:id="btnCustomer" layoutX="8.0" layoutY="-31.0" onAction="#btnCustomerOnAction" prefHeight="64.0" prefWidth="234.0" style="-fx-background-radius: 20;" text="Customer" textFill="#940229">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="17.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/icon/Customer icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="22.0" layoutY="295.0" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;">
+         <children>
+            <JFXButton fx:id="btnEmployee" layoutX="-5.0" layoutY="-43.0" onAction="#btnEmployeeOnAction" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;" text="Employee" textFill="#940229">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="7.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/icon/Employee icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="361.0" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;">
+         <children>
+            <JFXButton layoutX="-17.0" layoutY="-50.0" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;" text="Supplier" textFill="#940229">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="-4.0" layoutY="-37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/icon/Supplier icon.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnOrder" layoutX="-25.0" layoutY="6.0" onAction="#btnOrderOnAction" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;" text="Order" textFill="#940229">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/icon/Order icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="428.0" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;">
+         <children>
+            <JFXButton fx:id="btnItem" layoutX="-29.0" layoutY="-9.0" onAction="#btnItemOnAction" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;" text="Item" textFill="#940229">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="3.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/icon/Item icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="499.0" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="4.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/icon/Booking icon.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnBooking" layoutX="-21.0" layoutY="-21.0" onAction="#bntBookingOnAction" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;" text="Booking" textFill="#940229">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="573.0" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/icon/Report icon.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnReport" layoutX="-9.0" layoutY="13.0" onAction="#btnReportOnAction" prefHeight="64.0" prefWidth="210.0" style="-fx-background-radius: 20;" text="Report" textFill="#940229">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="647.0" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="-2.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/icon/Logout icon.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnLogOut" layoutX="-26.0" layoutY="-2.0" onAction="#btnLogOutOnAction" prefHeight="64.0" prefWidth="217.0" style="-fx-background-radius: 20;" text="Log Out" textFill="#940229">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <Pane layoutX="-1.0" layoutY="16.0" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;">
+               <children>
+                  <Pane layoutX="-29.0" layoutY="2.0" prefHeight="64.0" prefWidth="251.0" style="-fx-background-radius: 20;" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="258.0" layoutY="143.0" prefHeight="36.0" prefWidth="234.0" text="Supplier Manage">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="859.0" layoutY="431.0" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="61.0" style="-fx-background-color: lightblue;" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="787.0" layoutY="430.0" onAction="#btnUpdateOnAction" style="-fx-background-color: lightgreen;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="724.0" layoutY="430.0" onAction="#btnClearOnAction" style="-fx-background-color: yellow;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="935.0" layoutY="430.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="38.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icon/Delivery icon.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnDelivery" layoutX="10.0" layoutY="534.0" onAction="#btnDeliveryOnAction" prefHeight="64.0" prefWidth="245.0" style="-fx-background-radius: 20;" text="Delivery" textFill="#940229">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AncLogin" prefHeight="720.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.LoginPageFormController">
+   <children>
+      <Hyperlink fx:id="hyperfp" layoutX="668.0" layoutY="430.0" onAction="#hlinkForgotPassword" textFill="WHITE" />
+      <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0">
+         <image>
+            <Image url="@../assests/img/MacBook_Air_-_4png.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="742.0" fitWidth="1174.0" layoutX="-10.0" layoutY="-14.0">
+         <image>
+            <Image url="@../assests/img/MacBook_Air_-_4png.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="401.0" layoutY="88.0" prefHeight="540.0" prefWidth="386.0" style="-fx-background-color: tranparent; -fx-background-radius: 30px; -fx-border-color: black; -fx-border-radius: 30px; -fx-border-width: 2;" styleClass="pane" stylesheets="@../../../../../../../Documents/TeaCollection/src/main/resources/css/Colorgradient.css">
+         <children>
+            <Text fill="#0a0a0a" layoutX="126.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN " wrappingWidth="150.5">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font>
+            </Text>
+            <TextField fx:id="usernametxt" layoutX="71.0" layoutY="261.0" prefHeight="42.0" prefWidth="248.0" promptText="Username" style="-fx-background-color: white; -fx-background-radius: 40;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordfield1" layoutX="71.0" layoutY="321.0" prefHeight="42.0" prefWidth="248.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-background-radius: 40;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </PasswordField>
+            <Hyperlink fx:id="txtForgetPassword" layoutX="71.0" layoutY="374.0" onAction="#hyperFogotPasswordOnAction" text="Forget Password">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="checkpasswordbtn1" layoutX="274.0" layoutY="327.0" mnemonicParsing="false" onAction="#btncheckpasswordbtnonaction" prefHeight="25.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Documents/TeaCollection/src/main/resources/assets/eye.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="checkpasswordfield" layoutX="71.0" layoutY="321.0" prefHeight="42.0" prefWidth="248.0" style="-fx-background-color: transparent;" visible="false">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Button fx:id="invisiblebtn" layoutX="274.0" layoutY="327.0" mnemonicParsing="false" onAction="#btninvisiblebtnonaction" prefHeight="25.0" prefWidth="42.0" style="-fx-background-color: transparent;" visible="false">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Documents/TeaCollection/src/main/resources/assets/invisiblenew.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="blue" contentDisplay="CENTER" layoutX="136.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnOnActionLogin" prefHeight="47.0" prefWidth="118.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-alignment: center; -fx-border-image-width: 1;" styleClass="bacground" stylesheets="@../../../../../../../Documents/TeaCollection/src/main/resources/css/stylesheet.css" text="Login" textFill="#eee9e9">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Hyperlink fx:id="txtCreteAccount" layoutX="206.0" layoutY="399.0" onAction="#hyperCreateAccOnAction" text="create account">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Hyperlink>
+            <Text layoutX="76.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If You haven't Account ?" />
+            <ImageView fitHeight="67.0" fitWidth="68.0" layoutX="161.0" layoutY="102.0">
+               <image>
+                  <Image url="@../../../../../../../Downloads/2024644_login_user_avatar_person_users_icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

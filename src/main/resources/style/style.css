@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assests/font/Montserrat-VariableFont_wght.ttf');
+}
+
+.font{
+    -fx-font-family: Montserrat;
+}
+
+
+.font{
+    -fx-font-family: Montserrat;
+}
+
+/*.chart {*/
+/*    -fx-background-color: #DE7B93;*/
+/*}*/
+
+.chart-bar {
+    -fx-bar-fill: #f68fad;
+}
+
+.chart-pie {
+    -fx-pie-color: #f1cbd6;
+}
+.chart-pie-label {
+    -fx-font-weight: bold;
+}
+.chart-title {
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px
+}
+
+.chart-legend {
+    -fx-font-size: 12px;
+    -fx-text-fill: #910f5f;
+}
+
+.chart-pie {
+/-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);/
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+.chart-pie {
+    -fx-border-color: #bc4b96;
+}
+
+.chart-pie {
+    -fx-border-width: 1.5px;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: #573086;
+}
+
+
+
