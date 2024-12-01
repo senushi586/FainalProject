@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS fruityFizz;
+DROP DATABASE IF EXISTS coffeshop;
 
-CREATE DATABASE fruityFizz;
+CREATE DATABASE coffeshop;
 
-USE fruityFizz;
+USE coffeshop;
 
 CREATE TABLE employee(
                          id VARCHAR(10) PRIMARY KEY,
