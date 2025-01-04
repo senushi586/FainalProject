@@ -3,6 +3,7 @@ package lk.ijse.project.coffeeshop.controller;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.project.coffeeshop.model.UserModel;
@@ -120,9 +121,9 @@ public class LoginPageFormController {
 
     public void btnOnActionLogin(ActionEvent actionEvent) throws IOException {
         this.actionEvent = actionEvent;
-//        AncLogin.getChildren().clear();
-//        AnchorPane load = FXMLLoader.load(getClass().getResource("/view/dashboardForm.fxml"));
-//        AncLogin.getChildren().add(load);
+        AncLogin.getChildren().clear();
+        AnchorPane load = FXMLLoader.load(getClass().getResource("/view/dashboardForm.fxml"));
+        AncLogin.getChildren().add(load);
         if (UserModel.verifyCredentials(usernametxt.getText(),passwordfield1.getText())){
             try {
                 Navigation.switchNavigation("dashboardForm.fxml",actionEvent);
